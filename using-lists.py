@@ -16,6 +16,7 @@ del users[1]
 assert users == ['kevin', 'alice'], f"Expected `users` to be ['kevin', 'alice'] but got: {repr(users)}"
 
 # 4) Reverse the users list and assign the result to `rev_users`
+rev_users = list(reversed(users))
 
 assert rev_users == ['alice', 'kevin'], f"Expected `rev_users` to be ['alice', 'kevin'] but got: {repr(rev_users)}"
 
