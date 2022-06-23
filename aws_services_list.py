@@ -12,4 +12,4 @@ print(aws_services)
 
 #add services to list
 
-aws_services.append('Cognito', 'S3', 'Lambda', 'DynamoDB', 'EC2', 'Cloudfront', 'VPC', 'RDS', 'Elasticache', 'SNS')
+aws_services.insert('Cognito', 'S3', 'Lambda', 'DynamoDB', 'EC2', 'Cloudfront', 'VPC', 'RDS', 'Elasticache', 'SNS')
