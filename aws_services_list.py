@@ -34,7 +34,6 @@ time.sleep(2)
 print(aws_services)
 print("How many items in this list?", len(aws_services)) 
 
-import time
 time.sleep(2)
 
 #delete two services
@@ -45,7 +44,6 @@ del aws_services[9]
 del aws_services[8]
 
 print("Removed the last two items by index")
-
 
 #print new list and length of list
 print(aws_services)
