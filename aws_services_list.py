@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 #Create a list of AWS services using Python
 #The list should be empty initially
 #Populate the list using append or insert
@@ -24,3 +26,5 @@ aws_services.insert(9,'Elasticache')
 aws_services.insert(10,'SNS')
 
 print(aws_services)
+
+print "list length : ", len(aws_services)
