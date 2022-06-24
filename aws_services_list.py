@@ -27,4 +27,4 @@ aws_services.insert(10,'SNS')
 
 print(aws_services)
 
-print("How many items in list:" len(aws_services)) 
+print("How many items in list?", len(aws_services)) 
