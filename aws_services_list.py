@@ -29,10 +29,10 @@ aws_services.insert(10,'SNS')
 print(aws_services)
 print("How many items in list?", len(aws_services)) 
 
+import time
 time.sleep(1)
 
-print("Say goodbye to two random services...")
+print("Say goodbye to two services...")
 time.sleep(3)
 
-import random
-random.choice(aws_services)
+del aws_services[9]
