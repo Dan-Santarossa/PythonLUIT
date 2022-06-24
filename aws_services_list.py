@@ -8,12 +8,15 @@
 #Print the new list and the new length of the list
 
 #empty list
+import time
 aws_services = []
 
-print(aws_services)
+print("This is an empty list", (aws_services))
 
-
+time.sleep(2)
 #add services to list
+
+print("Adding 10 aws services to list with append")
 
 aws_services.insert(1,'Cognito')
 aws_services.insert(2,'S3')
@@ -26,13 +29,25 @@ aws_services.insert(8,'RDS')
 aws_services.insert(9,'Elasticache')
 aws_services.insert(10,'SNS')
 
+#print list and length of list
+time.sleep(2)
 print(aws_services)
-print("How many items in list?", len(aws_services)) 
+print("How many items in this list?", len(aws_services)) 
 
 import time
-time.sleep(1)
+time.sleep(2)
 
+#delete two services
 print("Say goodbye to two services...")
-time.sleep(3)
+time.sleep(2)
 
 del aws_services[9]
+del aws_services[8]
+
+print("Removed the last two items by index")
+
+
+#print new list and length of list
+print(aws_services)
+
+print("New length of list", len(aws_services)) 
