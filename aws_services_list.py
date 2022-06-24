@@ -44,8 +44,9 @@ del aws_services[9]
 del aws_services[8]
 
 print("Removed the last two items by index")
+time.sleep(2)
 
 #print new list and length of list
-print(aws_services)
+print("New list of services", (aws_services))
 
-print("New length of list", len(aws_services)) 
+print("New length of list:", len(aws_services)) 
