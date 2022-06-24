@@ -12,4 +12,15 @@ print(aws_services)
 
 #add services to list
 
-aws_services.insert('Cognito', 'S3', 'Lambda', 'DynamoDB', 'EC2', 'Cloudfront', 'VPC', 'RDS', 'Elasticache', 'SNS')
+aws_services.insert(1,'Cognito')
+aws_services.insert(2,'S3')
+aws_services.insert(3,'Lambda')
+aws_services.insert(4,'DynamoDB')
+aws_services.insert(5,'EC2')
+aws_services.insert(6,'Cloudfront')
+aws_services.insert(7,'VPC')
+aws_services.insert(8,'RDS')
+aws_services.insert(9,'Elasticache')
+aws_services.insert(10,'SNS')
+
+print(aws_services)
