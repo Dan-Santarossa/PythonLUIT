@@ -16,7 +16,7 @@ print("This is an empty list", (aws_services))
 time.sleep(2)
 #add services to list
 
-print("Adding 10 aws services to list with append")
+print("Adding 10 aws services to list with insert")
 
 aws_services.insert(1,'Cognito')
 aws_services.insert(2,'S3')
