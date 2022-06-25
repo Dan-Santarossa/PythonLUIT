@@ -56,6 +56,8 @@ assert email_list == [
 
 # 7) Return a list of tuples called `pairs` representing the key/value pairs in `emails`.
 
+pairs = list(emails.items())
+
 assert pairs == [
     ("ashley", "ashley@example.com"),
     ("elizabeth", "elizabeth@example.com"),
