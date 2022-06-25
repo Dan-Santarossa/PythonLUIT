@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3.7
 
 #Create a list of AWS services using Python
 #The list should be empty initially
