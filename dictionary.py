@@ -8,3 +8,6 @@ dict = {1:"Firstst Floor Sickroom", 2: "Hunters Dream", 3: "Central Yharnam", 4:
 #print (Dict)
 
 print (dict)
+
+for key, value in dict.items():
+    print(key, value)
