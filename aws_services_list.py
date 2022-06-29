@@ -39,6 +39,5 @@ time.sleep(2)
 
 #print new list and length of list
 print("New list of services", (aws_services))
-
 print("New length of list:", len(aws_services)) 
 
