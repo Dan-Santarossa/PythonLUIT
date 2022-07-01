@@ -1,10 +1,14 @@
 y = 5
 
-def set_x(y):
-    print("inner y:", y)
-    x = y
+def set_x(z):
+    x = z
+    global y
+    global a
     y = x
+    a = 7
+    
+print("y before set_x:", y)    
     
 set_x(10)    
-
-print("Outer y:", y)    
+print("y afetr set_x:", y)
+print("a after set_x:", a)    
