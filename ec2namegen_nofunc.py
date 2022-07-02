@@ -24,7 +24,7 @@ else:
     
     for instance in range(0, amount):
         randomnum = random.randint(100, 999)
-        randomchar = ' '.join(random.choices(string.ascii_letters, k=5))
+        randomchar = ''.join(random.choices(string.ascii_letters, k=5))
         ec2name = "{}_{}{}{}".format(department, randomnum, randomchar, instance)
         ec2list.append(ec2name)
         
