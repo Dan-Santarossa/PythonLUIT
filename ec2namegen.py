@@ -6,11 +6,11 @@ import string
 def generator(department, amount):
     depts = ['marketing', 'accounting', 'finops']
     ec2list = []
-    
     department = department.lower()
+    #department check
     if (department not in depts):
         print ("You are not authorized to use this EC2 name generator. ")
-    else: 
+    else: #instance name creation
        
         for instance in range(0, amount):
             randomnum = random.randint(100, 999)
@@ -18,13 +18,11 @@ def generator(department, amount):
             ec2name = "{}_{}{}{}".format(department, randomnum, randomchar, instance)
             ec2list.append(ec2name)
     
-        print("\n".join(ec2list))
+        print("\n".join(ec2list)) #print list
             
     return ec2list
     
-#if __name__ == "__main__":
- #   x = generator()
-  #  print("\n".join(x))
+
     
     
     
