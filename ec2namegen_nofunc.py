@@ -3,7 +3,6 @@ import random
 import string
 
 #Welcome to program
-
 print("Welcome to the EC2 unique name generator")
 print("")
 
@@ -29,11 +28,3 @@ else: #if department check successful ask for amount of names
         #print formatted list
     
     print("\n".join(ec2list))
-        
-        
-        
-        #if amount > maxinstances:
-    #    print ("Max amount of instances is {}".format(maxinstances))
-    #elif amount < mininstances:
-    #    print ("Minimum amount of instance is 1 {}".format(mininstances))
-    #else:
