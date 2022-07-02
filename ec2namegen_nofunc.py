@@ -15,11 +15,10 @@ ec2list = []
 #Department check
 department = input("Please state your department (Marketing, Accounting, FinOps): ").lower()
 
-
 if (department not in depts):
     print ("You are not authorized to use this EC2 name generator. ")
 else: 
-    
+    print("")
     amount = int(input("Enter the amount of EC2 instances: "))
     
     for instance in range(0, amount):
