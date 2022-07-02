@@ -23,7 +23,7 @@ else:
     if amount > maxinstances:
         print ("Max amount of instances is {}".format(maxinstances))
     elif amount < mininstances:
-        print ("Amount of instances to low {}".format(mininstances))
+        print ("Minimum amount of instances to low {}".format(mininstances))
     else:
         
         for instance in range(0, amount):
