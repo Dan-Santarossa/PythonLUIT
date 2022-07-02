@@ -33,12 +33,12 @@ else:
         print("\n".join(ec2list))
         
 
-def generator(department, amount):
+def generator():
     depts = ['marketing', 'accounting', 'finops']
     maxinstances = 1000
     mininstances = 1
     ec2list = []
-    
+    print("this one")
     #Department check
     department = input("Please state your department (Marketing, Accounting, FinOps): ").lower()
     
@@ -59,4 +59,12 @@ def generator(department, amount):
                 ec2list.append(ec2name)
     
             print("\n".join(ec2list))
+            
+    return ec2list
     
+if __name__ == "__main__":
+    generator()
+    
+    
+    
+
