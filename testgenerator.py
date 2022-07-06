@@ -1,6 +1,7 @@
 #!/usr/bin/env python3.10
 import random
 import string
+from sys import breakpointhook
 
 print("Welcome to the EC2 unique name generator")
 print("")
@@ -13,7 +14,6 @@ ec2list = []
 #Department check
 department = input("Please state your department (Marketing, Accounting, FinOps): ").lower()
 
-
 if (department not in depts):
     print ("You are not authorized to use this EC2 name generator. ")
 else: 
@@ -21,7 +21,7 @@ else:
     if amount > maxinstances:
         print ("Max amount of instances is {}".format(maxinstances))
     elif amount < mininstances:
-        print ("Minimum amount of instance is 1 {}".format(mininstances))
+        print ("Minimum amount of instances is 1")
     else:
         
         for instance in range(0, amount):
