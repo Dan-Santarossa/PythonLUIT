@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.10
 import random
 import string
-from sys import breakpointhook
+
 
 print("Welcome to the EC2 unique name generator")
 print("")
