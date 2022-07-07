@@ -26,5 +26,9 @@ else: #if department check successful ask for amount of names
         ec2name = "{}_{}{}{}".format(department, randomnum, randomchar, instance)
         ec2list.append(ec2name)
         
+<<<<<<< HEAD
+        #print formatted list
+=======
     #print formatted list
+>>>>>>> 36787d4cf2b6846a17e072227719110e6fd7f1e4
     print("\n".join(ec2list))
