@@ -8,8 +8,8 @@ def translate_text():
         SourceLanguageCode='en',
         TargetLanguageCode='it'
     )
-    print(response) # this code is inside the function and will print the contents of the variable 'response'
-
+    import pprint; pprint.pprint(response) # this code is inside the function and will print the contents of the variable 'response'
+    
 def main():
     translate_text()
 
