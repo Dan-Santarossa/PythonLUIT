@@ -1,0 +1,308 @@
+INFO:root:The SourceLanguageCode is the same as the TargetLanguageCode - nothing to do
+DEBUG:root:The value of SourceLanguageCode is it
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: C:\Users\julia\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\data\endpoints.json
+DEBUG:botocore.loaders:Loading JSON file: C:\Users\julia\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\data\sdk-default-configuration.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x0000020FD43024D0>
+DEBUG:botocore.loaders:Loading JSON file: C:\Users\julia\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\data\translate\2017-07-01\service-2.json
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x0000020FD4242DD0>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: C:\Users\julia\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\data\_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x0000020FD4303BE0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x0000020FD4303880>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x0000020FD4329480>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.24.22 Python/3.10.4 Windows/10 Botocore/1.27.22'}, 'body': b'{"Text": "What is cloud computing?", "SourceLanguageCode": "en", "TargetLanguageCode": "it"}', 'url': 'https://translate.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x0000020FD43E3040>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x0000020FD43E2F50>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x0000020FD4303AC0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-east-1.amazonaws.com
+x-amz-date:20220708T025008Z
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-target
+265f2d6b219b99c703c0a95c9991f39681ccdaeb89aeea25b74cc03dfb14f5fb
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20220708T025008Z
+20220708/us-east-1/translate/aws4_request
+1c18b8298954538105ba1976ee8938e4ca8670b5a954c5276915125f02931bb2
+DEBUG:botocore.auth:Signature:
+59c2bbd2f592ebd0048ea5f7f15a23a04d3aed6224bebe903da0a1e38310ec29
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x0000020FD4329B40>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.24.22 Python/3.10.4 Windows/10 Botocore/1.27.22', 'X-Amz-Date': b'20220708T025008Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA5BAHQO5ZTFAOEGR7/20220708/us-east-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=59c2bbd2f592ebd0048ea5f7f15a23a04d3aed6224bebe903da0a1e38310ec29', 'amz-sdk-invocation-id': b'0aaffd6a-5782-4a8a-a6b5-23c11919d8ff', 'amz-sdk-request': b'attempt=1', 'Content-Length': '92'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\julia\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 99
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '7fbbddd9-ba1e-4dd3-a31e-e5842a2f13bf', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '99', 'Date': 'Fri, 08 Jul 2022 02:50:07 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"it","TranslatedText":"Cos\'\xc3\xa8 il cloud computing?"}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x0000020FD43E39A0>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x0000020FD43024D0>
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x0000020FD4242DD0>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x0000020FD4303BE0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x0000020FD4303880>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x0000020FD4329480>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.24.22 Python/3.10.4 Windows/10 Botocore/1.27.22'}, 'body': b'{"Text": "Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing.", "SourceLanguageCode": "en", "TargetLanguageCode": "it"}', 'url': 'https://translate.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x0000020FD43E3490>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x0000020FD43E3460>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x0000020FD4303AC0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-east-1.amazonaws.com
+x-amz-date:20220708T025008Z
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-target
+5de44c5630521d76103bf6a64c60543890ae480450cbfbfc4892103228ef68b5
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20220708T025008Z
+20220708/us-east-1/translate/aws4_request
+beb0396020d092fe8206066954e3e6b17a2a77bd00140dfec38a6377144d3d76
+DEBUG:botocore.auth:Signature:
+cbb7a1a7cfb6b58f077c6458676d506bcbbf1d8b479aef16ac4f841769d08ada
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x0000020FD4329B40>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.24.22 Python/3.10.4 Windows/10 Botocore/1.27.22', 'X-Amz-Date': b'20220708T025008Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA5BAHQO5ZTFAOEGR7/20220708/us-east-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=cbb7a1a7cfb6b58f077c6458676d506bcbbf1d8b479aef16ac4f841769d08ada', 'amz-sdk-invocation-id': b'0009c434-909c-418d-ac4c-3b80b8de538e', 'amz-sdk-request': b'attempt=1', 'Content-Length': '171'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\julia\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 173
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': 'adf5a3ad-d2a6-4b4a-a2bf-b1186db0e816', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '173', 'Date': 'Fri, 08 Jul 2022 02:50:08 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"it","TranslatedText":"Il cloud computing \xc3\xa8 la distribuzione on demand di risorse IT su Internet con prezzi pay-as-you-go."}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x0000020FD43E3C40>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x0000020FD43024D0>
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x0000020FD4242DD0>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x0000020FD4303BE0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x0000020FD4303880>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x0000020FD4329480>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.24.22 Python/3.10.4 Windows/10 Botocore/1.27.22'}, 'body': b'{"Text": "Instead of buying, owning, and maintaining physical data centers and servers, you can access technology services, such as computing power, storage, and databases, on an as-needed basis itom a cloud provider like Amazon Web Services (AWS)", "SourceLanguageCode": "en", "TargetLanguageCode": "it"}', 'url': 'https://translate.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x0000020FD43E2920>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x0000020FD43E2AA0>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x0000020FD4303AC0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-east-1.amazonaws.com
+x-amz-date:20220708T025009Z
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-target
+ef6ed1f75f999f8583d5a42e965be259c9e44766c023f68af771415cde56c59c
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20220708T025009Z
+20220708/us-east-1/translate/aws4_request
+daa734fc9aecf1820dd2877d75e9b9dbb113241d49ff4ca5258e87f13c5c8664
+DEBUG:botocore.auth:Signature:
+9f4fc3226814c709bc9e4fe4e2b111dbde727a55f0443096d01c0c6358c3c746
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x0000020FD4329B40>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.24.22 Python/3.10.4 Windows/10 Botocore/1.27.22', 'X-Amz-Date': b'20220708T025009Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA5BAHQO5ZTFAOEGR7/20220708/us-east-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=9f4fc3226814c709bc9e4fe4e2b111dbde727a55f0443096d01c0c6358c3c746', 'amz-sdk-invocation-id': b'58dfaca2-e04f-4bb2-ac0b-89339152d643', 'amz-sdk-request': b'attempt=1', 'Content-Length': '305'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\julia\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 301
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '3a00903c-88af-4841-b7db-e8a90ea58139', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '301', 'Date': 'Fri, 08 Jul 2022 02:50:08 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"it","TranslatedText":"Invece di acquistare, possedere e gestire data center e server fisici, puoi accedere a servizi tecnologici, come potenza di calcolo, storage e database, in base alle necessit\xc3\xa0 da un provider cloud come Amazon Web Services (AWS)"}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x0000020FD4819060>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x0000020FD43024D0>
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x0000020FD4242DD0>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x0000020FD4303BE0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x0000020FD4303880>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x0000020FD4329480>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.24.22 Python/3.10.4 Windows/10 Botocore/1.27.22'}, 'body': b'{"Text": "Who is using cloud computing?", "SourceLanguageCode": "en", "TargetLanguageCode": "it"}', 'url': 'https://translate.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x0000020FD4819E40>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x0000020FD4819DB0>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x0000020FD4303AC0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-east-1.amazonaws.com
+x-amz-date:20220708T025009Z
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-target
+8e0650c974e72acc4954229c97823f798e210f1d154bca423ef528e7901b2da4
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20220708T025009Z
+20220708/us-east-1/translate/aws4_request
+bee9f8085c7157c9c246a634471684641a402f6572bcecd5e89771cc811f5da9
+DEBUG:botocore.auth:Signature:
+50fe9991dfe597a6780e0d49a3ae95d72104a30b93c622a1f3183cda45df3ad9
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x0000020FD4329B40>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.24.22 Python/3.10.4 Windows/10 Botocore/1.27.22', 'X-Amz-Date': b'20220708T025009Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA5BAHQO5ZTFAOEGR7/20220708/us-east-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=50fe9991dfe597a6780e0d49a3ae95d72104a30b93c622a1f3183cda45df3ad9', 'amz-sdk-invocation-id': b'dbeedef4-3488-4261-bd6d-d61a9b1718f4', 'amz-sdk-request': b'attempt=1', 'Content-Length': '97'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\julia\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 105
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '41923802-e0c5-4d0a-a68f-6510d11217b3', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '105', 'Date': 'Fri, 08 Jul 2022 02:50:08 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"it","TranslatedText":"Chi utilizza il cloud computing?"}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x0000020FD481A110>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x0000020FD43024D0>
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x0000020FD4242DD0>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x0000020FD4303BE0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x0000020FD4303880>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x0000020FD4329480>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.24.22 Python/3.10.4 Windows/10 Botocore/1.27.22'}, 'body': b'{"Text": "Organizations of every type, size, and industry are using the cloud for a wide variety of use cases, such as data backup, disaster recovery, email, virtual desktops, software development and testing, big data analytics, and customer-facing web applications.", "SourceLanguageCode": "en", "TargetLanguageCode": "it"}', 'url': 'https://translate.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x0000020FD481AF80>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x0000020FD481AEF0>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x0000020FD4303AC0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-east-1.amazonaws.com
+x-amz-date:20220708T025009Z
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-target
+4a799f3d09a00a262fdc26d395deae94ae8be6e53ad26dcf7f682cac77db60b7
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20220708T025009Z
+20220708/us-east-1/translate/aws4_request
+f8e9335fe0b0dd1999bb8a9121d453a9a5c915d243d2c26cdbc6328ccd1caaa5
+DEBUG:botocore.auth:Signature:
+25f94047d33bb1009060c2734f93c7c55d980889543dde5b87df54648e30bea0
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x0000020FD4329B40>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.24.22 Python/3.10.4 Windows/10 Botocore/1.27.22', 'X-Amz-Date': b'20220708T025009Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA5BAHQO5ZTFAOEGR7/20220708/us-east-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=25f94047d33bb1009060c2734f93c7c55d980889543dde5b87df54648e30bea0', 'amz-sdk-invocation-id': b'a0f6818c-6e70-4e87-b639-61a4bfc708be', 'amz-sdk-request': b'attempt=1', 'Content-Length': '325'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\julia\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 338
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': 'f68d35e8-0466-4f0c-98e7-4bde9a2d97dd', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '338', 'Date': 'Fri, 08 Jul 2022 02:50:09 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"it","TranslatedText":"Organizzazioni di ogni tipo, dimensione e settore utilizzano il cloud per un\'ampia gamma di casi d\'uso, come backup dei dati, ripristino di emergenza, e-mail, desktop virtuali, sviluppo e test di software, analisi dei big data e applicazioni Web rivolte ai clienti."}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x0000020FD481B310>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x0000020FD43024D0>
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x0000020FD4242DD0>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x0000020FD4303BE0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x0000020FD4303880>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x0000020FD4329480>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.24.22 Python/3.10.4 Windows/10 Botocore/1.27.22'}, 'body': b'{"Text": "For example, healthcare companies are using the cloud to develop more personalized treatments for patients. Financial services companies are using the cloud to power real-time itaud detection and prevention.", "SourceLanguageCode": "en", "TargetLanguageCode": "it"}', 'url': 'https://translate.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x0000020FD481B910>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x0000020FD481BC70>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x0000020FD4303AC0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-east-1.amazonaws.com
+x-amz-date:20220708T025009Z
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-target
+7c00e9b6813d69821b2c8e89d25ecb5c979421b411d7ce79aeb5f10b4d48f55b
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20220708T025009Z
+20220708/us-east-1/translate/aws4_request
+99d0a35b69e8744d051fee33b832bac7acb5191220a7db1bbfcd5baece8754b9
+DEBUG:botocore.auth:Signature:
+c352027dc50a8f9330341aeb7fd759c9d98f54692981030b04120a29d7b7d842
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x0000020FD4329B40>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.24.22 Python/3.10.4 Windows/10 Botocore/1.27.22', 'X-Amz-Date': b'20220708T025009Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA5BAHQO5ZTFAOEGR7/20220708/us-east-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=c352027dc50a8f9330341aeb7fd759c9d98f54692981030b04120a29d7b7d842', 'amz-sdk-invocation-id': b'cf1787bb-7201-4d18-90d0-b2cdf095c182', 'amz-sdk-request': b'attempt=1', 'Content-Length': '275'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\julia\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 325
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '133e1b96-21ef-4b2c-9383-d5247c566457', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '325', 'Date': 'Fri, 08 Jul 2022 02:50:09 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"it","TranslatedText":"Ad esempio, le aziende sanitarie stanno utilizzando il cloud per sviluppare trattamenti pi\xc3\xb9 personalizzati per i pazienti. Le societ\xc3\xa0 di servizi finanziari utilizzano il cloud per potenziare il rilevamento e la prevenzione degli itaud in tempo reale."}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x0000020FD4864460>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x0000020FD43024D0>
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x0000020FD4242DD0>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x0000020FD4303BE0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x0000020FD4303880>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x0000020FD4329480>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.24.22 Python/3.10.4 Windows/10 Botocore/1.27.22'}, 'body': b'{"Text": "And video game makers are using the cloud to deliver online games to millions of players around the world.", "SourceLanguageCode": "en", "TargetLanguageCode": "it"}', 'url': 'https://translate.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x0000020FD4865150>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x0000020FD4865120>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x0000020FD4303AC0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-east-1.amazonaws.com
+x-amz-date:20220708T025010Z
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-target
+32385c095ae9df98965f7ccc3c5796bd12fe8bbfab5e89cd0bd970510619424b
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20220708T025010Z
+20220708/us-east-1/translate/aws4_request
+6a63204fe7dc1d5aff39c623acd4982f2da9c1ea709483c24c76971d1324ebce
+DEBUG:botocore.auth:Signature:
+610d60b68c28b96d7a5bf68b49acb7898ca17c36e18f17577b945a58a690c12f
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x0000020FD4329B40>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.24.22 Python/3.10.4 Windows/10 Botocore/1.27.22', 'X-Amz-Date': b'20220708T025010Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA5BAHQO5ZTFAOEGR7/20220708/us-east-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=610d60b68c28b96d7a5bf68b49acb7898ca17c36e18f17577b945a58a690c12f', 'amz-sdk-invocation-id': b'b3c10fe7-f2ae-4d79-9543-58af6f65319b', 'amz-sdk-request': b'attempt=1', 'Content-Length': '174'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\julia\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 197
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': 'a702acda-cac1-4e10-a099-a137ecaf1063', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '197', 'Date': 'Fri, 08 Jul 2022 02:50:10 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"it","TranslatedText":"E i produttori di videogiochi stanno usando il cloud per distribuire giochi online a milioni di giocatori in tutto il mondo."}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x0000020FD4865570>
+DEBUG:botocore.retryhandler:No retry needed.
+WARNING:root:The SourceLanguageCode is not valid - stopping
+WARNING:root:Neither the SourceLanguageCode and TargetLanguageCode are valid - stopping
+WARNING:root:Neither the SourceLanguageCode and TargetLanguageCode are valid - stopping
+WARNING:root:The SourceLanguageCode is not valid - stopping
