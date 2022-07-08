@@ -43,13 +43,20 @@ def new_input_text_list():
         new_list.append(text)
     print(new_list)
 
+def new_list_comprehension():
+    input_text = open_input()
+    list_comprehension = [item['Text'] for item in input_text]
+    print(list_comprehension)
+
+
 # Main Function - use to call other functions
 def main():
     new_input_text_list()
     translate_loop()
+    new_list_comprehension()
 
 if __name__ == "__main__":
     main()
 
-# Create a list of the input text
 
+###https://catalog.us-east-1.prod.workshops.aws/workshops/3d705026-9edc-40e8-b353-bdabb116c89c/en-US/loops/lab-6/step-3
