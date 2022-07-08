@@ -34,9 +34,22 @@ def translate_loop():
     for item in input_text: # Here we iterate over all dictionaries in the Input list
         translate_text(**item)
 
+# Create a list of the input text
+def new_input_text_list():
+    input_text = open_input()
+    new_list = []
+    for item in input_text:
+        text = item['Text']
+        new_list.append(text)
+    print(new_list)
+
 # Main Function - use to call other functions
 def main():
+    new_input_text_list()
     translate_loop()
 
 if __name__ == "__main__":
     main()
+
+# Create a list of the input text
+
