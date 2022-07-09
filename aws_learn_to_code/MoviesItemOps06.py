@@ -27,14 +27,8 @@ try:
         Key={
             'year': year,
             'title': title
-        },
-        ConditionExpression="#info_rating <= :val",
-        ExpressionAttributeNames= {
-            "#info_rating": "info.rating"
-        },
-        ExpressionAttributeValues= {
-            ":val": decimal.Decimal(5)
         }
+        
     )
 except ClientError as e:
     if e.response['Error']['Code'] == "ConditionalCheckFailedException":
