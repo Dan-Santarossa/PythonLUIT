@@ -31,7 +31,7 @@ response = table.update_item(
         '#info_actors': 'info.actors'
     },
     ExpressionAttributeValues={
-        ':r': decimal.Decimal(8.1),
+        ':r': decimal.Decimal(8.0),
         ':p': "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.",
         ':a': ["Harrison Ford", "Ryan Gosling", "Ana de Armas"]
     },
