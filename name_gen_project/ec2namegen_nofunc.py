@@ -40,6 +40,6 @@ else:
         ec2name = "{}_{}{}{}".format(department, randomnum, randomchar, instance)
         ec2list.append(ec2name)
         
-    #print formatted list
+
     print("\n".join(ec2list))
     
