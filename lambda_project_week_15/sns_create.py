@@ -9,9 +9,8 @@ topic_arn = response["TopicArn"]
 print(topic_arn)
 
 sub = sns.subscribe(TopicArn=topic_arn,
-                         Protocol="email",
-                         Endpoint="dpsantarossa@gmail.com")
+                    Protocol="email",
+                    Endpoint="dpsantarossa@gmail.com")
 
-subscription_arn = sub("SubscriptionArn")
-
-print(subscription_arn)
+pending = sub["SubscriptionArn"]
+print("email subscribed:", (pending))
