@@ -1,5 +1,3 @@
-#!usr/bin/env python3.7
-
 import boto3
 
 ##Get the service resource.                        ##Set appropriate region
